@@ -1,0 +1,50 @@
+# Environment
+.env
+.env.local
+
+# Python
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Node (if used)
+node_modules/
+npm-debug.log
+yarn-error.log
+yarn-debug.log
+
+# Logs
+*.log
+logs
+*.log.*
+log/
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Data
+data/cache/
+*.sqlite3
