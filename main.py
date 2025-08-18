@@ -7,8 +7,8 @@ import os
 
 app = FastAPI(title="LeadHunter AI")
 
-app.mount("/static", StaticFiles(directory="../static"), name="static")
-templates = Jinja2Templates(directory="../templates")
+app.mount("/static", StaticFiles(directory="static"), name="static")
+templates = Jinja2Templates(directory="templates")
 
 # Allow your frontend domain
 app.add_middleware(
