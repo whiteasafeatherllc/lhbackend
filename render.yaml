@@ -3,27 +3,5 @@ services:
     name: leadhunterai-backend-3-432s
     plan: free
     env: python
-    region: oregon
-
-    # Root of your project
-    rootDir: .
-
-    # Build from project root
-    buildCommand: |
-      pip install -r backend/requirements.txt
-
-    # Start command — runs from project root
-    startCommand: uvicorn backend.main:app --host 0.0.0.0 --port $PORT
-
-    # Environment variables
-    envVars:
-      - key: PYTHON_VERSION
-        value: 3.11
-      - key: SERPLY_API_KEY
-        fromSecret: SERPLY_API_KEY
-      - key: REDDIT_CLIENT_ID
-        fromSecret: REDDIT_CLIENT_ID
-      - key: REDDIT_CLIENT_SECRET
-        fromSecret: REDDIT_CLIENT_SECRET
-      - key: REDDIT_USER_AGENT
-        value: LeadHunterAI:v1.0 (by u/samadhidagreat)p
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
