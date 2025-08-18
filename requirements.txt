@@ -1,14 +1,6 @@
---extra-index-url https://download.pytorch.org/whl/cpu
-
 fastapi==0.104.1
 uvicorn==0.24.0
 jinja2==3.1.2
 requests==2.31.0
 python-dotenv==1.0.0
 praw==7.7.1
-
-# Use a modern, available CPU-only torch build
-torch==2.5.0+cpu
-transformers==4.40.0
-sentencepiece==0.1.99
-tokenizers==0.19.1
