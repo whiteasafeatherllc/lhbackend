@@ -1,3 +1,4 @@
+# backend/main.py
 from fastapi import FastAPI, Request
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
@@ -6,16 +7,15 @@ import os
 
 app = FastAPI(title="LeadHunter AI")
 
-# Serve frontend files
 app.mount("/static", StaticFiles(directory="../static"), name="static")
 templates = Jinja2Templates(directory="../templates")
 
-# CORS — Allow your frontend domain
+# Allow your frontend domain
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "https://leadhunterapp.superlativeorganics.shop",
-        "http://localhost:8000",  # For local testing
+        "http://localhost:8000",
         "http://127.0.0.1:8000"
     ],
     allow_credentials=True,
@@ -57,4 +57,4 @@ async def generate_message(request: Request):
         return {"message": message}
     except Exception as e:
         print(f"Generate error: {e}")
-        return {"error": "AI generation failed"}
+        return {"error": "Message generation failed"}
