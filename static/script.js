@@ -1,4 +1,4 @@
-const API_BASE = "https://leadhunterai-backend-3.onrender.com";
+const API_BASE = "https://leadhunterai-backend-3-432s.onrender.com";
 let searchResults = [];
 let prospects = JSON.parse(localStorage.getItem('prospects') || '[]');
 
