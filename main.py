@@ -234,7 +234,7 @@ PLATFORM_SOURCES = {
 def is_high_intent(title: str, snippet: str) -> bool:
     triggers = ["looking for", "need help", "recommend", "best", "any good"]
     text = f"{title} {snippet}".lower()
-    return any(trigger in text for trigger)
+    return any(trigger in text for trigger in triggers)
 
 def fetch_serply(keyword: str, endpoint: str, query: str = "") -> List[Dict]:
     base = "https://api.serply.io/v1/google"
