@@ -7,8 +7,8 @@ requests==2.31.0
 python-dotenv==1.0.0
 praw==7.7.1
 
-# Use torch with CPU-only build (compatible with Render free tier)
-torch==2.1.0+cpu
-transformers==4.35.0
+# Use a modern, available CPU-only torch build
+torch==2.5.0+cpu
+transformers==4.40.0
 sentencepiece==0.1.99
-tokenizers==0.14.0
+tokenizers==0.19.1
