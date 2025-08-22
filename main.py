@@ -12,14 +12,16 @@ app = FastAPI(title="LeadHunter AI")
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
-        "https://leadhunterapp.superlativeorganics.shop",
-        "http://localhost:8000",
+        "https://leadhunterapp.superlativeorganics.shop",   # your frontend
+        "https://leadhunterai-backend-3-432s.onrender.com", # your backend on Render
+        "http://localhost:8000",                           # local dev
         "http://127.0.0.1:8000"
     ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
 
 # === In-Memory Templates & Static Files ===
 # We'll serve index.html directly from string
